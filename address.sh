@@ -84,8 +84,28 @@ function delete_rec() {
         cat $filename
 }
 
-#add_rec
+echo "1 for inserting a record."
+echo "2 for searching a record."
+echo "3 for deleting a record."
+echo "4 for showing all records."
+echo "5 for exit"
 
-#search_rec
 
-delete_rec
+while $True
+do
+        echo "Enter choice:- "
+        read choice
+        case "$choice" in
+                "1" ) add_rec
+                ;;
+                "2" ) search_rec
+                ;;
+                "3" ) delete_rec
+                ;;
+                "4" ) cat $filename
+                ;;
+                "5" ) exit
+                ;;
+        esac
+        echo ""
+done
